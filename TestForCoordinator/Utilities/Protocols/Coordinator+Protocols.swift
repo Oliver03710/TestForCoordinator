@@ -1,5 +1,5 @@
 //
-//  Coordinator.swift
+//  Coordinator+Protocols.swift
 //  TestForCoordinator
 //
 //  Created by Junhee Yoon on 2022/12/28.

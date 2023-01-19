@@ -17,7 +17,7 @@
 		ADD0C7CF295C507C009C345B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD0C7CE295C507C009C345B /* Assets.xcassets */; };
 		ADD0C7D2295C507C009C345B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD0C7D0295C507C009C345B /* LaunchScreen.storyboard */; };
 		ADD0C7DA295C5116009C345B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD0C7D9295C5116009C345B /* MainCoordinator.swift */; };
-		ADD0C7DC295C5130009C345B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD0C7DB295C5130009C345B /* Coordinator.swift */; };
+		ADD0C7DC295C5130009C345B /* Coordinator+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD0C7DB295C5130009C345B /* Coordinator+Protocols.swift */; };
 		ADD0C7DE295C544E009C345B /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD0C7DD295C544E009C345B /* SceneCoordinator.swift */; };
 		ADD0C7E0295C5D54009C345B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD0C7DF295C5D54009C345B /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +35,7 @@
 		ADD0C7D1295C507C009C345B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADD0C7D3295C507C009C345B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADD0C7D9295C5116009C345B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		ADD0C7DB295C5130009C345B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		ADD0C7DB295C5130009C345B /* Coordinator+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Protocols.swift"; sourceTree = "<group>"; };
 		ADD0C7DD295C544E009C345B /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		ADD0C7DF295C5D54009C345B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +51,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD1178F229791CF200EA967E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AD1178FB29791DC400EA967E /* Protocols */,
+				AD1178F329791D0900EA967E /* Coordinators */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AD1178F329791D0900EA967E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				ADD0C7DD295C544E009C345B /* SceneCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		AD1178F429791D2300EA967E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AD1178F529791D2F00EA967E /* Main */,
+				AD1178F629791D4300EA967E /* FirstView */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AD1178F529791D2F00EA967E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AD1178F929791D7D00EA967E /* Views */,
+				AD1178FA29791D8400EA967E /* ViewControllers */,
+				AD1178F829791D6D00EA967E /* Coordinators */,
+				AD1178F729791D6200EA967E /* ViewModels */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AD1178F629791D4300EA967E /* FirstView */ = {
+			isa = PBXGroup;
+			children = (
+				AD5A42AE295D45C800199249 /* FirstCoordinator.swift */,
+				AD5A42AC295D45BA00199249 /* FirstViewController.swift */,
+			);
+			path = FirstView;
+			sourceTree = "<group>";
+		};
+		AD1178F729791D6200EA967E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ADD0C7DF295C5D54009C345B /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AD1178F829791D6D00EA967E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				ADD0C7D9295C5116009C345B /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		AD1178F929791D7D00EA967E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD5A42B1295D58E600199249 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AD1178FA29791D8400EA967E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ADD0C7C9295C507B009C345B /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AD1178FB29791DC400EA967E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				ADD0C7DB295C5130009C345B /* Coordinator+Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		ADD0C7B9295C507B009C345B = {
 			isa = PBXGroup;
 			children = (
@@ -72,14 +158,8 @@
 			children = (
 				ADD0C7C5295C507B009C345B /* AppDelegate.swift */,
 				ADD0C7C7295C507B009C345B /* SceneDelegate.swift */,
-				ADD0C7DB295C5130009C345B /* Coordinator.swift */,
-				ADD0C7DD295C544E009C345B /* SceneCoordinator.swift */,
-				ADD0C7D9295C5116009C345B /* MainCoordinator.swift */,
-				ADD0C7DF295C5D54009C345B /* MainViewModel.swift */,
-				ADD0C7C9295C507B009C345B /* MainViewController.swift */,
-				AD5A42B1295D58E600199249 /* MainView.swift */,
-				AD5A42AE295D45C800199249 /* FirstCoordinator.swift */,
-				AD5A42AC295D45BA00199249 /* FirstViewController.swift */,
+				AD1178F229791CF200EA967E /* Utilities */,
+				AD1178F429791D2300EA967E /* Scenes */,
 				ADD0C7CB295C507B009C345B /* Main.storyboard */,
 				ADD0C7CE295C507C009C345B /* Assets.xcassets */,
 				ADD0C7D0295C507C009C345B /* LaunchScreen.storyboard */,
@@ -166,7 +246,7 @@
 				AD5A42AD295D45BA00199249 /* FirstViewController.swift in Sources */,
 				AD5A42AF295D45C800199249 /* FirstCoordinator.swift in Sources */,
 				ADD0C7DA295C5116009C345B /* MainCoordinator.swift in Sources */,
-				ADD0C7DC295C5130009C345B /* Coordinator.swift in Sources */,
+				ADD0C7DC295C5130009C345B /* Coordinator+Protocols.swift in Sources */,
 				ADD0C7C6295C507B009C345B /* AppDelegate.swift in Sources */,
 				ADD0C7C8295C507B009C345B /* SceneDelegate.swift in Sources */,
 			);
